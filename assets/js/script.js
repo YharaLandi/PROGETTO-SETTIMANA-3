@@ -20,8 +20,11 @@ REGOLE
    - una variabile per la stringa di ricerca corrente
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+let rettili = [];        // array di oggetti, uno per ogni rettile
+let filtro = "tutti";   // categoria selezionata nel <select>; "tutti" = nessun filtro attivo
+let ordinamento = "nome-az"; // criterio di ordinamento corrente applicato in render()
+let ricerca = "";        // stringa vuota x la barra di ricerca 
+let vista = "lista";    // modalità di visualizzazione corrente
 
 /* RENDER()
    Una sola funzione che ridipinge la lista. A ogni chiamata:
