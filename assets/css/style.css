@@ -38,17 +38,17 @@ button {
 header {
   background: #2c4a2e;
   color: #e8d5a3;
-  height: 120px;
-  /* togli max-width da qui */
+  height: 160px;
 }
 
 .headerInner {
   max-width: 960px;
-  /* mettilo qui */
   margin: 0 auto;
   width: 96%;
 }
-
+.logo{
+padding: 20px;
+}
 #btnTema {
   float: right;
   margin-right: 20px;
@@ -184,8 +184,7 @@ main {
   margin-right: 0.3rem;
 }
 
-.btnOrdine,
-.btnVista {
+.btnOrdine {
   display: inline-block;
   padding: 0.3rem 0.7rem;
   border: 1px solid #aaa;
@@ -195,13 +194,12 @@ main {
   margin-right: 0.3rem
 }
 
-.btnOrdine:hover,
-.btnVista:hover { 
-  background: #e0d8ce; 
+.btnOrdine:hover {
+  background: #e0d8ce;
 }
- /*quando si attiva*/
-.btnOrdine.attivo,
-.btnVista.attivo {
+
+/*quando si attiva*/
+.btnOrdine.attivo {
   background: #2c4a2e;
   color: #e8d5a3;
   border-color: #2c4a2e;
@@ -214,7 +212,8 @@ main {
   margin-right: 2rem;
   vertical-align: top;
 }
- /*stile numero partenza*/
+
+/*stile numero partenza*/
 .statNumero {
   display: block;
   font-size: 3rem;
@@ -222,23 +221,23 @@ main {
   color: #2c4a2e;
   line-height: 1;
 }
- 
+
 .statLabel {
   font-size: 0.8rem;
   color: #777;
 }
- 
+
 .barreCategorie {
   display: inline-block;
   width: 60%;
   vertical-align: top;
   margin-top: 0.5rem;
 }
- 
+
 .barraRiga {
   margin-bottom: 0.4rem;
 }
- 
+
 .barraLabel {
   display: inline-block;
   font-size: 0.8rem;
@@ -246,7 +245,7 @@ main {
   color: #444;
   vertical-align: middle;
 }
- 
+
 .barraOuter {
   display: inline-block;
   width: 55%;
@@ -255,10 +254,107 @@ main {
   border-radius: 5px;
   vertical-align: middle;
 }
- 
+
 .barraInner {
   height: 100%;
   background: #2c4a2e;
   border-radius: 5px;
 }
+/* notifica */
+#notifica {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  background: #2c4a2e;
+  color: #e8d5a3;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+/*card*/
+ul.gridCard { list-style: none; }
+ 
+.cardRettile {
+  display: inline-block;
+  width: 30%;
+  margin-right: 2%;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 0.9rem;
+  background: #fdf9f5;
+  vertical-align: top;
+}
+ 
+.cardRettile:hover { border-color: #2c4a2e; }
+ 
+.cardNome { display: block; font-size: 1.05rem; font-weight: bold; margin-bottom: 0.25rem; }
+.cardMorph { display: block; font-size: 0.8rem; color: #777; margin-bottom: 0.15rem; }
+.cardAcquisita { display: block; font-size: 0.75rem; color: #999; margin-bottom: 0.5rem; }
+.cardNote { display: block; font-size: 0.78rem; color: #888; margin-bottom: 0.6rem; min-height: 1em; }
+ 
+.cardAzioni button {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  background: #f0ebe4;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+ 
+.cardAzioni button:hover { background: #e0d8ce; }
+.cardAzioni .elimina { color: #c0392b; border-color: #e8b4b4; }
+.cardAzioni .elimina:hover { background: #fdecea; }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer*/
+footer {
+  text-align: center;
+  height: 212px;
+  font-size: 1rem;
+  border-top: 1px solid #ddd;
+  background: #2c4a2e;
+  color: #e8d5a3;
+}
+footer p{
+  margin: 120px;
+}
+
+
+/* oscuro*/
+
+body.dark {
+  background: #111;
+  color: #eee;
+}
+
+body.dark .form,
+body.dark .controlli,
+body.dark .statistiche,
+body.dark .lista {
+  background: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark header {
+  background: #1a2e1b;
+}
+
+body.dark footer {
+  background: #1a2e1b;
+}
