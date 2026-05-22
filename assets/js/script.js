@@ -107,16 +107,6 @@ let vista = "lista";    // modalità di visualizzazione corrente
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 
-/* ESPORTAZIONE / IMPORTAZIONE JSON (cerca tu su MDN)
-   - Esporta: crea un Blob con JSON.stringify(stato), genera un URL con
-     URL.createObjectURL e simula il click su un <a download>.
-   - Importa: <input type="file"> + FileReader per leggere il contenuto come
-     testo, JSON.parse, sostituisci lo stato, render().
-*/
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
-
 /* STATISTICHE GRAFICHE
    Almeno due indicatori: contatori grandi e/o barre orizzontali
    (<div> con width: X% in base al dato). Aggiorna dentro render().
