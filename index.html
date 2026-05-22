@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,34 +9,86 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body>
 
   <header>
-  <div class="intestazione">
+    <div class="headerInner">
       <div>
         <h1><i class="bi bi-stars"></i>Reptile Keeper</h1>
         <p class="sottotitolo">La tua collezione personale</p>
       </div>
-      <button id="btn-tema"><i class="bi bi-circle-half"></i></i>Tema</button>
+      <button id="btnTema"><i class="bi bi-circle-half"></i></i>Tema</button>
     </div>
   </header>
 
   <main>
-
     <section class="form">
-      <!-- Form di inserimento di nuovi elementi -->
+      <h2>Aggiungi rettile</h2>
+      <form id="formRettile">
+        <!--testo-->
+        <div class="formRow">
+          <input type="text" id="inputNome" placeholder="Nome">
+        </div>
+        <!--input-->
+        <div class="formRow">
+          <input type="text" id="inputMorph" placeholder="Morph">
+          <select id="inputCategoria">
+            <option value="Piton">Piton</option>
+            <option value="Boa">Boa</option>
+            <option value="Colubride">Colubride</option>
+            <option value="Altro">Altro</option>
+          </select>
+        </div>
+        <!--testo-->
+        <div class="formRow">
+          <input type="text" id="inputAcquisita" placeholder="Anno acquisizione">
+          <input type="text" id="inputNote" placeholder="Note">
+        </div>
+        <p id="erroreForm" class="errore"></p>
+        <button type="submit" class="btnPrimary">+ Aggiungi</button>
+      </form>
     </section>
 
+
     <section class="controlli">
-      <!-- Ricerca live, filtro (select), ordinamento -->
+      <div class="controlliRow">
+        <input type="text" id="ricerca" placeholder=" Cerca per nome, specie, morph…">
+        <!--categorie di ricerca-->
+        <select id="filtroCategoria">
+          <option value="tutti">Tutte le categorie</option>
+          <option value="Piton">Piton</option>
+          <option value="Boa">Boa</option>
+          <option value="Colubride">Colubride</option>
+          <option value="Altro">Altro</option>
+        </select>
+      </div>
+
+      <!--ordina-->
+      <div class="controlliRow">
+        <span class="labelControllo">Ordina:</span>
+        <button class="btnOrdine attivo" data-ordine="nome-az"><i class="bi bi-arrow-up"></i>Nome A-Z</button>
+        <button class="btnOrdine" data-ordine="nome-za"><i class="bi bi-arrow-down"></i>Nome Z-A</button>
+        <button class="btnOrdine" data-ordine="specie">Specie</button>
+      </div>
+      <div class="controlliRow">
+        <span class="labelControllo">Vista:</span>
+        <button class="btnVista attivo" data-vista="lista"><i class="bi bi-list"></i> Lista</button>
+        <button class="btnVista" data-vista="card"><i class="bi bi-person-vcard"></i>Card</button>
+        <button class="btnVista" data-vista="tabella"><i class="bi bi-postcard"></i> Tabella</button>
+      </div>
     </section>
 
     <section class="statistiche">
-      <!-- Conteggi e/o barre orizzontali -->
+      <div class="statBox">
+        <span class="statNumero" id="contatoreTotale">0</span>
+        <span class="statLabel">rettili in collezione</span>
+      </div>
+      <div id="barreCategorie" class="barreCategorie"></div>
     </section>
 
     <section class="lista">
-      <!-- Container che render() ricostruisce a ogni cambio di stato -->
+      <div id="listaRettili"></div>
     </section>
 
     <div id="notifica"></div>
@@ -43,9 +96,9 @@
   </main>
 
   <footer>
-    <!-- Autore, anno -->
-  </footer>
+<p>Reptile Keeper — Yhara Landi &copy; 2026</p>  </footer>
 
   <script src="assets/js/script.js"></script>
 </body>
+
 </html>
