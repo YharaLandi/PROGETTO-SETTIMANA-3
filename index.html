@@ -17,11 +17,11 @@
       <div>
         <h1><i class="bi bi-stars"></i>Reptile Keeper</h1>
         <p class="sottotitolo">La tua collezione personale</p>
+        <button id="btnTema"><i class="bi bi-circle-half"></i></i> Tema</button>
       </div>
-      <button id="btnTema"><i class="bi bi-circle-half"></i></i>Tema</button>
     </div>
-  </header>
 
+  </header>
   <main>
     <section class="form">
       <h2>Aggiungi rettile</h2>
@@ -53,15 +53,18 @@
 
     <section class="controlli">
       <div class="controlliRow">
+        <div class="lunghezzaCategorie">
         <input type="text" id="ricerca" placeholder=" Cerca per nome, specie, morph…">
         <!--categorie di ricerca-->
-        <select id="filtroCategoria">
-          <option value="tutti">Tutte le categorie</option>
-          <option value="Piton">Piton</option>
-          <option value="Boa">Boa</option>
-          <option value="Colubride">Colubride</option>
-          <option value="Altro">Altro</option>
-        </select>
+        
+          <select id="filtroCategoria">
+            <option value="tutti">Tutte le categorie</option>
+            <option value="Piton">Piton</option>
+            <option value="Boa">Boa</option>
+            <option value="Colubride">Colubride</option>
+            <option value="Altro">Altro</option>
+          </select>
+        </div>
       </div>
 
       <!--ordina-->
@@ -74,7 +77,7 @@
       <div class="controlliRow">
         <span class="labelControllo">Vista:</span>
         <button class="btnVista attivo" data-vista="lista"><i class="bi bi-list"></i> Lista</button>
-        <button class="btnVista" data-vista="card"><i class="bi bi-person-vcard"></i>Card</button>>
+        <button class="btnVista" data-vista="card"><i class="bi bi-person-vcard"></i> Card</button>
       </div>
     </section>
 
@@ -95,8 +98,8 @@
   </main>
 
   <footer>
-<p>Reptile Keeper — Yhara Landi &copy; 2026</p>  </footer>
-
+    <p>Reptile Keeper — Yhara Landi &copy; 2026</p>
+  </footer>
   <script src="assets/js/script.js"></script>
 </body>
 
